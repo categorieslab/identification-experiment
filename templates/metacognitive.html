@@ -1,0 +1,57 @@
+<div id="container-questionnaire">
+
+    <hr>
+
+    <!-- Metacognitive question text. It is copied verbatim from the E-Prime 3 file. -->
+    <p>You have completed the testing phase. In the testing phase, you were asked to identify each of
+      the sixteen paintings twice, for a total of thirty-two identifications.<p>
+    <p>Please indicate the number of correct identifications you believe you made by dragging the
+      slider below.</p>
+    <p>After you have made your selection, please click the button to submit your answer and move
+      to the concluding screen.</p>
+
+    <hr>
+
+    <!-- Where the value of the slider will appear on screen. -->
+    <font size="12" color="green"><b><span id="demo" style="display:table; margin:0 auto"></span></b></font>
+
+    <div class="instructions well">
+        <form id="postquiz" action="debrief" method="post">
+
+          <!-- Slider -->
+          <div class="slidecontainer">
+            <input type="range" min="0" max="32" value="0" step="1" class="slider" id="myRange">
+          </div>
+
+        </form>
+    </div>
+
+    <!-- Javascript code for displaying the current value of the slider. -->
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>
+
+    <hr>
+
+    <div class="instructionsnav">
+        <div class="row">
+            <div class="col-xs-2">
+            </div>
+            <div class="col-xs-7">
+            </div>
+            <div class="col-xs-3">
+                <button type="button" id="next" value="next" class="btn btn-primary btn-lg continue">
+                    Continue <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

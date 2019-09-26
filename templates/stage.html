@@ -1,0 +1,110 @@
+<head>
+	<script type="text/javascript" src="static/js/task.js"></script>
+</head>
+
+<body>
+<div id="container-exp">
+	<div id="trial">
+
+		<!-- Displays an "Please wait" message if saveData fails. -->
+		<div id="pleaseWait" style="display:none">
+			<h1><span class="waitMessage">
+				If you are seeing this message, there has been an issue logging the data.
+				Please wait up to 30 seconds. Thank you very much!
+			</span></h1>
+		</div>
+
+		<!-- Displays a fixation cross in the center of the painting. -->
+		<div id="fixation" style="display:none">
+			<br><br><br><br><br><br><br><br>
+			<h1><span class="cross">+</span></h1>
+		</div>
+
+		<!-- Displays the painting on the screen -->
+		<div id="paintingStim"></div>
+
+		<br>
+
+		<!-- Displays either "Correct!" or "Incorrect!" as well as the painting name. -->
+		<div id="feedbackTag" style="color:black">
+			<h1><span class="feedback"></span><span class="identification"></span></h1>
+		</div>
+
+		<!-- Displays "Which painting is this?" -->
+		<div id="Top">
+			<h1><span class="instructions"></span></h1>
+		</div>
+
+		<!-- Displays "Please select a button." -->
+		<div id="Bottom">
+			<h2><span class="guess"></span></h2>
+		</div>
+
+		<!-- Buttons are not displayed by default. They are displayed after the fixation cross is removed from screen. -->
+		<div id="buttonsBeforeWait" style="display:none">
+			<hr>
+			<div>
+				<button class="button" name="button1" onclick="alert('Please wait half a second before responding.')">bep</button>
+				<button class="button" name="button2" onclick="alert('Please wait half a second before responding.')">civ</button>
+				<button class="button" name="button3" onclick="alert('Please wait half a second before responding.')">dem</button>
+				<button class="button" name="button4" onclick="alert('Please wait half a second before responding.')">fum</button>
+				<button class="button" name="button5" onclick="alert('Please wait half a second before responding.')">gog</button>
+				<button class="button" name="button6" onclick="alert('Please wait half a second before responding.')">jop</button>
+				<button class="button" name="button7" onclick="alert('Please wait half a second before responding.')">kiz</button>
+				<button class="button" name="button8" onclick="alert('Please wait half of a second before responding.')">lix</button>
+			</div>
+			<div>
+				<button class="button" name="button9" onclick="alert('Please wait half of a second before responding.')">nuk</button>
+				<button class="button" name="button10" onclick="alert('Please wait half of a second before responding.')">pif</button>
+				<button class="button" name="button11" onclick="alert('Please wait half of a second before responding.')">rab</button>
+				<button class="button" name="button12" onclick="alert('Please wait half of a second before responding.')">sot</button>
+				<button class="button" name="button13" onclick="alert('Please wait half of a second before responding.')">tex</button>
+				<button class="button" name="button14" onclick="alert('Please wait half of a second before responding.')">vin</button>
+				<button class="button" name="button15" onclick="alert('Please wait half of a second before responding.')">wup</button>
+				<button class="button" name="button16" onclick="alert('Please wait half of a second before responding.')">zat</button>
+			</div>
+		</div>
+
+		<!-- These buttons are not displayed until after the painting has been on screen for 500ms.
+	       This is done to prevent participants from trying to finish the experiment as fast
+				 as possible without doing the task. -->
+		<div id="buttonsAfterWait" style="display:none">
+			<hr>
+			<div>
+				<button class="button" name="button1" onclick="responseHandler('bep')">bep</button>
+				<button class="button" name="button2" onclick="responseHandler('civ')">civ</button>
+				<button class="button" name="button3" onclick="responseHandler('dem')">dem</button>
+				<button class="button" name="button4" onclick="responseHandler('fum')">fum</button>
+				<button class="button" name="button5" onclick="responseHandler('gog')">gog</button>
+				<button class="button" name="button6" onclick="responseHandler('jop')">jop</button>
+				<button class="button" name="button7" onclick="responseHandler('kiz')">kiz</button>
+				<button class="button" name="button8" onclick="responseHandler('lix')">lix</button>
+			</div>
+			<div>
+				<button class="button" name="button9" onclick="responseHandler('nuk')">nuk</button>
+				<button class="button" name="button10" onclick="responseHandler('pif')">pif</button>
+				<button class="button" name="button11" onclick="responseHandler('rab')">rab</button>
+				<button class="button" name="button12" onclick="responseHandler('sot')">sot</button>
+				<button class="button" name="button13" onclick="responseHandler('tex')">tex</button>
+				<button class="button" name="button14" onclick="responseHandler('vin')">vin</button>
+				<button class="button" name="button15" onclick="responseHandler('wup')">wup</button>
+				<button class="button" name="button16" onclick="responseHandler('zat')">zat</button>
+			</div>
+		</div>
+
+		<style>
+			.button {
+				width: 90px;
+				height: 62px; /* (Somewhat close) Golden ratio of width to height */
+				text-align: center;
+				background-color: #D3D3D3;
+				padding: 15px 32px;
+				font-size: 23px;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+		</style>
+
+	</div>
+</div>
+</body>
